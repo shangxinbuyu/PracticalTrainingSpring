@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: PracticalTraining
+  datasource:
+    url: jdbc:mysql://lx496957.ink:3306/practical_training?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 496957
+mybatis-plus:
+  configuration:
+    # 开启驼峰映射
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    io.github.shangxinbuyu.practicaltraining:
+      controller: info
+      service: info
+      mapper: debug
