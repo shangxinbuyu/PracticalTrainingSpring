@@ -45,16 +45,13 @@ public class InitiateVoteServiceImpl implements InitiateVoteService {
 
     private List<VoteVO> ObjectCopy(List<Vote> voteList) {
         List<VoteVO> voteVOList = new ArrayList<>();
-        voteList.forEach(vote -> {
-            voteVOList.add(VoteVO.builder()
-                    .id(vote.getId())
-                    .publishTime(vote.getPublishTime())
-                    .title(vote.getTitle())
-                    .publishBy(vote.getPublishBy())
-                    .state(vote.getState())
-                    .build());
-
-        });
+        voteList.forEach(vote -> voteVOList.add(VoteVO.builder()
+                .id(vote.getId())
+                .publishTime(vote.getPublishTime())
+                .title(vote.getTitle())
+                .publishBy(vote.getPublishBy())
+                .state(vote.getState())
+                .build()));
         return voteVOList;
     }
 }
