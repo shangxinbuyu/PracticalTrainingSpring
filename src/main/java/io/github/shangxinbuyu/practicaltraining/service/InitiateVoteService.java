@@ -9,4 +9,6 @@ public interface InitiateVoteService {
     List<VoteVO> list();
 
     void change(VoteVO voteVO);
+
+    List<VoteVO> like(String like);
 }

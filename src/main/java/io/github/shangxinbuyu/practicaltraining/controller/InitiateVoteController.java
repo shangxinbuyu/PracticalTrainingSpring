@@ -20,6 +20,11 @@ public class InitiateVoteController {
         return Result.success(initiateVoteService.list());
     }
 
+    @GetMapping("/like")
+    public Result<List<VoteVO>> like(@RequestParam String like) {
+        return Result.success(initiateVoteService.like(like));
+    }
+
     @PostMapping("/change")
     public Result<String> changeVote(@RequestBody VoteVO voteVO) {
         initiateVoteService.change(voteVO);
