@@ -54,4 +54,9 @@ public class InitiateVoteServiceImpl implements InitiateVoteService {
                 .build()));
         return voteVOList;
     }
+
+    @Override
+    public void deleteById(String id) {
+        initiateVoteMapper.deleteById(id);
+    }
 }

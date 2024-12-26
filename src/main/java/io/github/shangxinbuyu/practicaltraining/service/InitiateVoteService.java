@@ -11,4 +11,6 @@ public interface InitiateVoteService {
     void change(VoteVO voteVO);
 
     List<VoteVO> like(String like);
+
+    void deleteById(String id);
 }
